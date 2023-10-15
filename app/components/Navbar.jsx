@@ -10,7 +10,7 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     }
   return (
-    <nav className='w-full  flex lg:flex-row flex-col justify-between items-center lg:px-10 lg:gap-y-0 gap-y-7'>
+    <nav className='w-full  flex lg:flex-row flex-col justify-between items-center lg:px-10 lg:gap-y-0 gap-y-7 fixed top-0 z-50'>
     <div className='lg:w-[50%] w-full justify-between lg:px-0 px-10  flex'>
     <Image src={'/images/fcscLogo.png'} width={1000} height={1000} alt='fcsc logo' className='w-[25rem] h-[6rem] lg:ml-0 ml-[-3rem] scale-75 '/>
     <Image src={isOpen? '/close.svg':'/hamburgerMenu.svg'} width={40} height={40} alt='HAMBURGER MENU' className='lg:hidden transition ease-in-out ' onClick={toggle}/>

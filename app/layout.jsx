@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter, sentie } from 'next/font/google'
 import localFonts from 'next/font/local'
+import Navbar from './components/Navbar'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,7 +19,10 @@ export default function RootLayout({ children }) {
       <head>
       <link href="https://api.fontshare.com/v2/css?f[]=sentient@1&display=swap" rel="stylesheet"/>
       </head>
-      <body >{children}</body>
+      <body >
+        <Navbar/>
+        {children}
+        </body>
     </html>
   )
 }
