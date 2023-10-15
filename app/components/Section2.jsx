@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Section2 = () => {
   return (
-    <div className='w-full h-screen bg-pink-400 bg-[url("/images/event4.jpg")] bg-cover'>
+    <div className='w-full h-screen bg-pink-400 bg-[url("/images/event5.jpg")] bg-cover bg-center'>
     <div className='w-full h-full bg-[#00000086] flex items-end'>
 
       <div className='w-full h-[50%] lg:px-24 flex flex-col gap-y-7 text-white lg:justify-start lg:items-start justify-center items-center px-9  '>

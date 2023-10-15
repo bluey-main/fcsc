@@ -29,11 +29,11 @@ const Section1 = () => {
         </p>
 
         <div className='w-full flex gap-x-5 justify-center items-center'>
-          <div className='w-[11rem] h-[4rem] text-white bg-customGreen flex p-5 justify-center items-center gap-x-3 rounded-2xl text-lg font-semibold'>
+          <div className='lg:w-[11rem] h-[4rem] w-[10rem]  text-white bg-customGreen flex p-5 justify-center items-center gap-x-3 rounded-2xl lg:text-lg text-base font-semibold'>
             <p>Contact Us</p>
             <Image src={'/plane.svg'} width={20} height={20} alt='plane'/>
           </div>
-          <div className='w-[11rem] h-[4rem] text-customBlack  border-black border-2 flex p-5 justify-center items-center gap-x-3 rounded-2xl text-lg font-semibold'>
+          <div className='lg:w-[11rem] w-[10rem] h-[4rem] text-customBlack  border-black border-2 flex p-5 justify-center items-center gap-x-3 rounded-2xl lg:text-lg text-base font-semibold'>
             <p>View Gallery</p>
          
           </div>
