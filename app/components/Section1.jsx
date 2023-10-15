@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Section1 = () => {
   return (
-    <div className='w-full lg:h-[160vh] h-screen bg-[#F5F5DC] relative overflow-hidden '>
+    <div className='w-full lg:h-[160vh] h-[120vh] bg-[#F5F5DC] relative overflow-hidden '>
     <Image src={'/Lines.svg'} width={2000} height={10} alt='lines' className=' translate-y-20 absolute top-0 bottom-0 hidden lg:block' />
     <div className='w-[18rem] h-[18rem] bg-green-500 rounded-full translate-x-[-8rem] translate-y-28 absolute hidden lg:block bg-[url("/images/event1.jpg")] bg-cover'></div>
     <div className='w-[18rem] h-[18rem] bg-red-500 rounded-full absolute right-0 translate-x-[5rem] translate-y-48 hidden lg:block bg-[url("/images/event2.jpg")] bg-cover'></div>
@@ -21,7 +21,7 @@ const Section1 = () => {
           <p className='text-sm'>the best you can get</p>
         </div>
         <h1 className='lg:text-7xl text-5xl text-center font-bold text-customBlack'>
-          Elevate Your Occasion:
+          Elevate Your Occasion: <br />
           A Venue as Grand as Your Dreams
         </h1>
         <p className='text-2xl font-semibold text-center lg:px-44 px-10 text-customBlackFaded'>
