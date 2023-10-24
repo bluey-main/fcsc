@@ -2,7 +2,7 @@ import React from 'react'
 
 const Section4 = () => {
   return (
-    <div className='w-full h-[150vh] '>
+    <div className='w-full lg:h-[150vh] h-[200vh] '>
     <div className='w-full  flex flex-col justify-center items-center gap-y-6 pt-24 pb-7'>
       <h1 className='text-5xl font-bold text-center text-customBlack'>Our Gallery</h1>
       <p className='text-xl font-semibold text-center text-customBlackFaded'>Explore our gallery featuring unforgettable events hosted in our Main Hall</p>

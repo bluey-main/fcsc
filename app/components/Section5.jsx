@@ -45,11 +45,11 @@ const Section5 = () => {
   return (
     <div className="w-full h-screen   bg-[url('/images/event4.jpg')] bg-cover">
       <div className="w-full h-full bg-[#0000006b] py-16 flex justify-end ">
-        <div className="lg:w-[55%] w-full  h-full  rounded-l-[10rem]   overflow-hidden">
-          <div className="w-full h-full bg-[#000000ab] px-32  flex justify-center flex-col text-white gap-y-20">
-            <p className="text-4xl font-bold">What Our Clients Say</p>
+        <div className="lg:w-[55%] w-full  h-full  rounded-l-[10rem]   overflow-hidden  ">
+          <div className="w-full h-full   bg-[#000000ab] lg:px-32 px-10 flex justify-center flex-col text-white gap-y-20">
+            <p className="text-4xl font-bold lg:text-left text-center">What Our Clients Say</p>
 
-            <div className="h-1/2 flex flex-col gap-y-8">
+            <div className="lg:h-1/2 h-[40%] flex   flex-col gap-y-8">
               <Image
                 src={"/quote.svg"}
                 width={50}
@@ -57,7 +57,7 @@ const Section5 = () => {
                 alt="quote icon"
               />
               <div className="w-full h-[6rem] ">
-                <p>{testimonials[index].comment}</p>
+                <p className="lg:text-left text-center">{testimonials[index].comment}</p>
               </div>
 
               <div className="w-full h-[30%]  flex">

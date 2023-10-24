@@ -17,10 +17,10 @@ const Navbar = () => {
     </div>
     <div className= {`lg:w-[40%] w-full lg:px-0 px-8 lg:flex ${isOpen ? 'flex' : 'hidden'}`}>
       <ul className='p-6 rounded-lg lg:bg-transparent bg-customBlack  w-full flex justify-around lg:flex-row flex-col text-lg text-white lg:text-customBlack font-medium gap-y-5'>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Gallery</li>
-        <li>Testimonial</li>
+        <li className='cursor-pointer'>Home</li>
+        <li className='cursor-pointer'>About Us</li>
+        <li className='cursor-pointer'>Gallery</li>
+        <li className='cursor-pointer'>Testimonial</li>
       </ul>
     </div>
 
