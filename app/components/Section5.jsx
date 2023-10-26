@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import FadeLeftBox from "./animatedComponents/FadeLeftBox";
 const Section5 = () => {
   let [index, setIndex] = useState(0);
 
@@ -43,52 +44,64 @@ const Section5 = () => {
     },
   ];
   return (
-    <div className="w-full h-screen   bg-[url('/images/event4.jpg')] bg-cover">
+    <div className="w-full h-screen   bg-[url('/images/event4.jpg')] bg-cover overflow-hidden">
       <div className="w-full h-full bg-[#0000006b] py-16 flex justify-end ">
-        <div className="lg:w-[55%] w-full  h-full  rounded-l-[10rem]   overflow-hidden  ">
+        <FadeLeftBox
+          styles={
+            "lg:w-[55%] w-full  h-full  rounded-l-[10rem]   overflow-hidden "
+          }
+        >
           <div className="w-full h-full   bg-[#000000ab] lg:px-32 px-10 flex justify-center flex-col text-white gap-y-20">
-            <p className="text-4xl font-bold lg:text-left text-center">What Our Clients Say</p>
+            <FadeLeftBox delay={0.3}>
+              <p className="text-4xl font-bold lg:text-left text-center">
+                What Our Clients Say
+              </p>
+            </FadeLeftBox>
 
-            <div className="lg:h-1/2 h-[40%] flex   flex-col gap-y-8">
-              <Image
-                src={"/quote.svg"}
-                width={50}
-                height={50}
-                alt="quote icon"
-              />
-              <div className="w-full h-[6rem] ">
-                <p className="lg:text-left text-center">{testimonials[index].comment}</p>
-              </div>
+            <FadeLeftBox delay={0.5}>
+              <div className="lg:h-1/2 h-[40%] flex   flex-col gap-y-8">
+                <Image
+                  src={"/quote.svg"}
+                  width={50}
+                  height={50}
+                  alt="quote icon"
+                />
+                <div className="w-full h-[6rem] ">
+                  <p className="lg:text-left text-center">
+                    {testimonials[index].comment}
+                  </p>
+                </div>
 
-              <div className="w-full h-[30%]  flex">
-                <div className="w-1/2 h-full  flex flex-col gap-y-1">
-                  <Image
-                    src={"/Star.svg"}
-                    width={90}
-                    height={90}
-                    alt="stars icon"
-                  />
-                  <p>{testimonials[index].name}</p>
-                  <p className="text-sm">{testimonials[index].role}</p>
-                </div>
-                <div className="w-1/2 h-full flex gap-x-2 justify-end items-center ">
-                  <div
-                    className="w-[2rem] h-[2rem] border-white border-2 rounded-full flex justify-center items-center cursor-pointer"
-                    onClick={decrementIndex}
-                  >
-                    <p>-</p>
+                <div className="w-full h-[30%]  flex">
+                  <div className="w-1/2 h-full  flex flex-col gap-y-1">
+                    <Image
+                      src={"/Star.svg"}
+                      width={90}
+                      height={90}
+                      alt="stars icon"
+                    />
+                    <p>{testimonials[index].name}</p>
+                    <p className="text-sm">{testimonials[index].role}</p>
                   </div>
-                  <div
-                    className="w-[2rem] h-[2rem] bg-gray-50 rounded-full flex justify-center items-center text-customBlack cursor-pointer "
-                    onClick={incrementIndex}
-                  >
-                    <p>+</p>
+                  <div className="w-1/2 h-full flex gap-x-2 justify-end items-center ">
+                    <div
+                      className="w-[2rem] h-[2rem] border-white border-2 rounded-full flex justify-center items-center cursor-pointer"
+                      onClick={decrementIndex}
+                    >
+                      <p>-</p>
+                    </div>
+                    <div
+                      className="w-[2rem] h-[2rem] bg-gray-50 rounded-full flex justify-center items-center text-customBlack cursor-pointer "
+                      onClick={incrementIndex}
+                    >
+                      <p>+</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </FadeLeftBox>
           </div>
-        </div>
+        </FadeLeftBox>
       </div>
     </div>
   );
