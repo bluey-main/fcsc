@@ -6,7 +6,7 @@ import FadeInBox from "../animatedComponents/FadeInBox";
 
 const Section4 = () => {
   return (
-    <div className="w-full lg:h-[150vh] h-[120vh] overflow-hidden pb-24 ">
+    <div className="w-full lg:h-[150vh] h-[120vh] overflow-hidden pb-24 " id="gallery">
       <div className="w-full  flex flex-col justify-center items-center gap-y-6 pt-24 pb-10">
         <FadeUpBox>
           <h1 className="text-5xl font-bold text-center text-customBlack">

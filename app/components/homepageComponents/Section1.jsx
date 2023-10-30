@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import FadeInBox from "../animatedComponents/FadeInBox";
 import FadeUpBox from "../animatedComponents/FadeUpBox";
+import Link from "next/link";
 
 const Section1 = () => {
   return (
@@ -88,18 +89,23 @@ const Section1 = () => {
 
             <FadeUpBox delay={0.1}>
               <div className="w-full flex gap-x-5 justify-center items-center">
-                <div className="lg:w-[11rem] h-[4rem] w-[10rem]  text-white bg-customGreen flex p-5 justify-center items-center gap-x-3 rounded-2xl lg:text-lg text-base font-semibold">
-                  <p>Contact Us</p>
-                  <Image
-                    src={"/plane.svg"}
-                    width={20}
-                    height={20}
-                    alt="plane"
-                  />
-                </div>
-                <div className="lg:w-[11rem] w-[10rem] h-[4rem] text-customBlack  border-black border-2 flex p-5 justify-center items-center gap-x-3 rounded-2xl lg:text-lg text-base font-semibold">
-                  <p>View Gallery</p>
-                </div>
+                <Link href={"/contact"}>
+                  <div className="lg:w-[11rem] h-[4rem] w-[10rem]  text-white bg-customGreen flex p-5 justify-center items-center gap-x-3 rounded-2xl lg:text-lg text-base font-semibold">
+                    <p>Contact Us</p>
+                    <Image
+                      src={"/plane.svg"}
+                      width={20}
+                      height={20}
+                      alt="plane"
+                    />
+                  </div>
+                </Link>
+
+                <Link href={"/#gallery"}>
+                  <div className="lg:w-[11rem] w-[10rem] h-[4rem] text-customBlack  border-black border-2 flex p-5 justify-center items-center gap-x-3 rounded-2xl lg:text-lg text-base font-semibold">
+                    <p>View Gallery</p>
+                  </div>
+                </Link>
               </div>
             </FadeUpBox>
           </FadeUpBox>
@@ -108,6 +114,5 @@ const Section1 = () => {
     </div>
   );
 };
-
 
 export default Section1;
