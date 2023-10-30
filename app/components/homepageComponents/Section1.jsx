@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import FadeInBox from "./animatedComponents/FadeInBox";
-import FadeUpBox from "./animatedComponents/FadeUpBox";
+import FadeInBox from "../animatedComponents/FadeInBox";
+import FadeUpBox from "../animatedComponents/FadeUpBox";
 
 const Section1 = () => {
   return (

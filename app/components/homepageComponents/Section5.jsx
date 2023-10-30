@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import FadeLeftBox from "./animatedComponents/FadeLeftBox";
+import FadeLeftBox from "../animatedComponents/FadeLeftBox";
 const Section5 = () => {
   let [index, setIndex] = useState(0);
 
@@ -44,7 +44,7 @@ const Section5 = () => {
     },
   ];
   return (
-    <div className="w-full h-screen   bg-[url('/images/event4.jpg')] bg-cover overflow-hidden">
+    <div className="w-full h-screen   bg-[url('/images/event4.jpg')] bg-cover overflow-hidden" id="testimonial">
       <div className="w-full h-full bg-[#0000006b] py-16 flex justify-end ">
         <FadeLeftBox
           styles={

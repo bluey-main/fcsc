@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import FadeRightBox from "./animatedComponents/FadeRightBox";
-import FadeLeftBox from "./animatedComponents/FadeLeftBox";
-import FadeUpBox from "./animatedComponents/FadeUpBox";
+import FadeRightBox from "../animatedComponents/FadeRightBox";
+import FadeLeftBox from "../animatedComponents/FadeLeftBox";
+import FadeUpBox from "../animatedComponents/FadeUpBox";
+import Link from "next/link";
 
 const Section3 = () => {
   return (
@@ -39,15 +40,15 @@ const Section3 = () => {
               demand
             </p>
           </FadeLeftBox>
-          
 
           <FadeUpBox yaxis={50} delay={0.3}>
-          <div className="w-[11rem] h-[4rem] text-white bg-customGreen flex p-5 justify-center items-center gap-x-3 rounded-2xl text-lg font-semibold">
-            <p>Contact Us</p>
-            <Image src={"/plane.svg"} width={20} height={20} alt="plane" />
-          </div>
+            <Link href={"/contact"}>
+              <div className="w-[11rem] h-[4rem] text-white bg-customGreen flex p-5 justify-center items-center gap-x-3 rounded-2xl text-lg font-semibold">
+                <p>Contact Us</p>
+                <Image src={"/plane.svg"} width={20} height={20} alt="plane" />
+              </div>
+            </Link>
           </FadeUpBox>
-    
         </div>
       </div>
     </div>

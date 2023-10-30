@@ -1,8 +1,8 @@
 import React from "react";
-import FadeUpBox from "./animatedComponents/FadeUpBox";
-import FadeRightBox from "./animatedComponents/FadeRightBox";
-import FadeLeftBox from "./animatedComponents/FadeLeftBox";
-import FadeInBox from "./animatedComponents/FadeInBox";
+import FadeUpBox from "../animatedComponents/FadeUpBox";
+import FadeRightBox from "../animatedComponents/FadeRightBox";
+import FadeLeftBox from "../animatedComponents/FadeLeftBox";
+import FadeInBox from "../animatedComponents/FadeInBox";
 
 const Section4 = () => {
   return (
