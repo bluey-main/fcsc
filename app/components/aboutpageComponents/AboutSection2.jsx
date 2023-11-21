@@ -6,7 +6,7 @@ import FadeRightBox from '../animatedComponents/FadeRightBox'
 
 const AboutSection2 = () => {
   return (
-    <div className="w-full lg:h-[130vh]   flex justify-center items-center flex-col gap-y-12 lg:pt-0 pt-10 mb-10 bg-[#F5F5DC] overflow-hidden">
+    <div className="w-full lg:h-[150vh]   flex justify-center items-center flex-col gap-y-12 lg:pt-0 pt-10 mb-10 bg-[#F5F5DC] overflow-hidden">
     <div className="w-full flex flex-col  justify-center gap-y-5 items-center">
         <FadeUpBox yaxis={50}>
         <p className="text-5xl text-customBlack">Why Choose Us</p>
@@ -33,13 +33,16 @@ const AboutSection2 = () => {
         </FadeRightBox>
   
       <div className="lg:w-1/2 w-full lg:h-full lg:gap-y-0 gap-y-6 lg:px-0 pr-7  flex flex-col justify-around">
-        <BrickComponent mainColor={'bg-[#AAE2CD]'} miniBoxColor={'bg-[#2BB682]'} title={'Elegant Celebrations'} subtitle={"Elevate your special moments with our venue's timeless elegance. Discover a space designed to make your event shine"} delay={0.2}/>
+        <BrickComponent mainColor={'bg-[#AAE2CD]'} miniBoxColor={'bg-[#2BB682]'} title={'Capacity'} subtitle={"Our event center boasts an expansive space, offering a seating capacity that exceeds 200 guests, providing ample room for your gatherings, celebrations, and events."} delay={0.2}/>
 
-        <BrickComponent mainColor={'bg-[#FFE1AA]'} miniBoxColor={'bg-[#FFB42B]'} title={'Exceptional Service'} subtitle={"Experience exceptional service from inquiry to farewell. We're committed to your vision and making your event extraordinary"} delay={0.3}/>
+        <BrickComponent mainColor={'bg-[#FFE1AA]'} miniBoxColor={'bg-[#FFB42B]'} title={'Self Customization'} subtitle={"Designing an event space that aligns seamlessly with your vision and preferences, we specialize in creating a unique and tailored experience for your gatherings."} delay={0.3}/>
 
-        <BrickComponent mainColor={'bg-[#AAE2CD]'} miniBoxColor={'bg-[#2BB682]'} title={'Versatility and Adaptability'} subtitle={"Our space adapts to your needs, whether it's a wedding, seminar, or celebration. "} delay={0.4}/>
+        <BrickComponent mainColor={'bg-[#AAE2CD]'} miniBoxColor={'bg-[#2BB682]'} title={'Affordable Elegance'} subtitle={"A Friendly and Moderately Priced Premier Event Center"} delay={0.4}/>
 
-        <BrickComponent mainColor={'bg-[#FFE1AA]'} miniBoxColor={'bg-[#FFB42B]'} title={'Unforgettable Memories'} subtitle={"We craft events that leave lasting memories. Every detail is designed to make your celebration truly unforgettable"} delay={0.5}/>
+        <BrickComponent mainColor={'bg-[#FFE1AA]'} miniBoxColor={'bg-[#FFB42B]'} title={'Ultimate Convenience'} subtitle={"Hygienic Restroom Facilities with Adequate Power Supply for Your Comfort"} delay={0.5}/>
+
+        <BrickComponent mainColor={'bg-[#AAE2CD]'} miniBoxColor={'bg-[#2BB682]'} title={'Strategically Positioned in the Heart of Yaba'} subtitle={"Situated at the heart of Yaba, ensuring a central and easily accessible location in a secure GRA environment, safeguarded against unauthorized access by hoodlums."} delay={0.6}/>
+
        
       </div>
     </div>

@@ -44,7 +44,7 @@ const Section5 = () => {
     },
   ];
   return (
-    <div className="w-full h-screen   bg-[url('/images/event4.jpg')] bg-cover overflow-hidden" id="testimonial">
+    <div className="w-full h-screen   bg-[url('/images/main-center-images/img13.jpg')] bg-cover overflow-hidden" id="testimonial">
       <div className="w-full h-full bg-[#0000006b] py-16 flex justify-end ">
         <FadeLeftBox
           styles={

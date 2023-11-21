@@ -3,6 +3,9 @@ import Image from "next/image";
 import FadeInBox from "../animatedComponents/FadeInBox";
 import FadeUpBox from "../animatedComponents/FadeUpBox";
 import Link from "next/link";
+import { Dancing_Script } from "next/font/google";
+
+const dancingScript = Dancing_Script({subsets:['latin']})
 
 const Section1 = () => {
   return (
@@ -80,7 +83,7 @@ const Section1 = () => {
 
           <FadeUpBox styles={"flex flex-col gap-y-10"}>
             <h1 className="lg:text-7xl text-5xl text-center font-bold text-customBlack">
-              Elevate Your Occasion: <br />A Venue as Grand as Your Dreams
+              Elevate Your Occasion: <br />A Venue as Grand as Your Dreams <br/> <span className={`${dancingScript.className} text-5xl`}> Moderate and Accessible</span> 
             </h1>
             <p className="text-2xl font-semibold text-center lg:px-44 px-10 text-customBlackFaded">
               Discover Our Premier Event Center, Tailored for Unforgettable

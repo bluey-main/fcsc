@@ -11,7 +11,7 @@ const Section3 = () => {
       <div className="w-full h-[80%]  flex relative">
         <FadeRightBox
           styles={
-            'lg:w-[55%] w-full  h-full  rounded-r-[10rem] bg-[url("/images/event4.jpg")] bg-cover overflow-hidden'
+            'lg:w-[55%] w-full  h-full  rounded-r-[10rem] bg-[url("/images/main-center-images/img13.jpg")] bg-cover overflow-hidden'
           }
         >
           <div className="w-full h-full bg-[#0000006b]"></div>
