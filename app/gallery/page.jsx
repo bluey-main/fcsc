@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 const Gallery = () => {
   const image1 = "/images/main-center-images/img2.jpg";
   const image2 = "/images/main-center-images/img3.jpg";
@@ -62,7 +62,20 @@ const Gallery = () => {
 
   const hideLightBox = () => {
     setLightBoxDisplay(false);
+     // Remove the 'overflow: hidden' style when the lightbox is closed
+     document.body.style.overflow = "visible";
   };
+
+  useEffect(() => {
+    // Add the 'overflow: hidden' style when the lightbox is displayed
+    if (lightboxDisplay) {
+      document.body.style.overflow = "hidden";
+    }
+    // Remove the 'overflow: hidden' style when the component is unmounted or lightbox is closed
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }, [lightboxDisplay]);
 
   const showNext = (e) => {
     e.stopPropagation();
@@ -92,26 +105,39 @@ const Gallery = () => {
   };
 
 
+
   return (
     <>
-    {lightboxDisplay ? (
+   {lightboxDisplay ? (
         <div
-          className="z-50 fixed top-0 left-0 w-full h-full bg-[#000000b2] flex items-center justify-center lg:justify-between"
+          className="z-50 fixed top-0 left-0 w-full h-full bg-[#000000b2] flex items-center justify-between"
           onClick={hideLightBox}
         >
-          {/* //previous button */}
-          <button onClick={showPrev} className="border-2 text-white lg:text-7xl text-2xl bg-customGreen pt-1">⭠</button>
-          <div className="max-w-[90vw] h-[80vh] object-cover">
-            <Image
-              src={imageToShow}
-              width={1000}
-              height={1000}
-              alt="image"
-              className="w-full h-full"
-            />
+          <div className="w-full h-full flex items-center justify-between px-4">
+            {/* //previous button */}
+            <button
+              onClick={showPrev}
+              className="border-2 text-white text-7xl bg-[#00000086] pt-1 lg:static absolute left-0 w-[5rem] rounded-lg"
+            >
+              &lt;
+            </button>
+            <div className="lg:max-w-[90vw]  lg:h-[80vh] w-[30rem] h-[30rem] object-cover">
+              <Image
+                src={imageToShow}
+                width={1000}
+                height={1000}
+                alt="image"
+                className="w-full h-full"
+              />
+            </div>
+            {/* //next button */}
+            <button
+              onClick={showNext}
+              className="border-2 text-white text-7xl bg-[#00000086] pt-1 lg:static absolute right-0 w-[5rem] rounded-lg"
+            >
+            &gt;
+            </button>
           </div>
-          {/* //next button */}
-          <button onClick={showNext} className="border-2 text-white lg:text-7xl text-2xl bg-customGreen pt-1">⭢</button>
         </div>
       ) : (
         ""
@@ -125,7 +151,7 @@ const Gallery = () => {
                 <>
                   <article
                     key={image}
-                    className="p-6 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                    className="p-6 mb-6  transition duration-300 group transform hover:-translate-y-2 lg:hover:shadow-2xl shadow-2xl rounded-2xl cursor-pointer"
                     onClick={() => showImage(image)}
                   >
                 

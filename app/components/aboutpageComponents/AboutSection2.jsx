@@ -6,22 +6,22 @@ import FadeRightBox from '../animatedComponents/FadeRightBox'
 
 const AboutSection2 = () => {
   return (
-    <div className="w-full lg:h-[150vh]   flex justify-center items-center flex-col gap-y-12 lg:pt-0 pt-10 mb-10 bg-[#F5F5DC] overflow-hidden">
+    <div className="w-full lg:h-[150vh]   flex justify-center items-center flex-col gap-y-12 lg:pt-0 pt-10 bg-[#F5F5DC] overflow-hidden">
     <div className="w-full flex flex-col  justify-center gap-y-5 items-center">
         <FadeUpBox yaxis={50}>
-        <p className="text-5xl text-customBlack">Why Choose Us</p>
+        <p className="lg:text-5xl text-3xl font-bold text-customBlack">Why Choose Us</p>
 
         </FadeUpBox>
 
         <FadeUpBox yaxis={50} delay={0.4}>
-        <p className="text-xl text-customBlackFaded text-center">
+        <p className="lg:text-xl text-lg  text-customBlackFaded text-center">
         Where Excellence and Elegance Unite to Elevate Your Event
       </p>
         </FadeUpBox>
 
     </div>
 
-    <div className="w-full lg:h-[70%] h-[90%] flex lg:flex-row gap-y-9 flex-col lg:px-28 lg:gap-x-6">
+    <div className="w-full lg:h-[70%] h-[100%] flex lg:flex-row gap-y-9 flex-col lg:px-28 lg:gap-x-6">
         <FadeRightBox styles={"lg:w-1/2 w-full lg:h-full h-1/2  overflow-hidden rounded-3xl py-3 lg:px-0 px-5"}>
         <Image
           src={"/images/event4.jpg"}

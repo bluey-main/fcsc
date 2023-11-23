@@ -4,7 +4,7 @@ import FadeUpBox from "../animatedComponents/FadeUpBox";
 import FadeRightBox from "../animatedComponents/FadeRightBox";
 import FadeLeftBox from "../animatedComponents/FadeLeftBox";
 import FadeInBox from "../animatedComponents/FadeInBox";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,7 +29,6 @@ const Section4 = () => {
     image8,
   ];
 
-
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
   const [imageToShow, setImageToShow] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,7 +44,21 @@ const Section4 = () => {
 
   const hideLightBox = () => {
     setLightBoxDisplay(false);
+
+     // Remove the 'overflow: hidden' style when the lightbox is closed
+     document.body.style.overflow = "visible";
   };
+
+  useEffect(() => {
+    // Add the 'overflow: hidden' style when the lightbox is displayed
+    if (lightboxDisplay) {
+      document.body.style.overflow = "hidden";
+    }
+    // Remove the 'overflow: hidden' style when the component is unmounted or lightbox is closed
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }, [lightboxDisplay]);
 
   const showNext = (e) => {
     e.stopPropagation();
@@ -61,23 +74,16 @@ const Section4 = () => {
     }
   };
 
-
   const showPrev = (e) => {
-    e.stopPropagation()
-    let currentIndex = images.indexOf(imageToShow)
-      if(currentIndex <= 0) {
-      setLightBoxDisplay(false)
-    }
-    else {
-      let nextImage = images[currentIndex - 1]
-      setImageToShow(nextImage)
+    e.stopPropagation();
+    let currentIndex = images.indexOf(imageToShow);
+    if (currentIndex <= 0) {
+      setLightBoxDisplay(false);
+    } else {
+      let nextImage = images[currentIndex - 1];
+      setImageToShow(nextImage);
     }
   };
-
-
-
-
-
 
   return (
     <>
@@ -86,46 +92,58 @@ const Section4 = () => {
           className="z-50 fixed top-0 left-0 w-full h-full bg-[#000000b2] flex items-center justify-between"
           onClick={hideLightBox}
         >
-          {/* //previous button */}
-          <button onClick={showPrev} className="border-2 text-white text-7xl bg-customGreen pt-1">⭠</button>
-          <div className="max-w-[90vw] h-[80vh] object-cover">
-            <Image
-              src={imageToShow}
-              width={1000}
-              height={1000}
-              alt="image"
-              className="w-full h-full"
-            />
+          <div className="w-full h-full flex items-center justify-between px-4">
+            {/* //previous button */}
+            <button
+              onClick={showPrev}
+              className="border-2 text-white text-7xl bg-[#00000086] pt-1 lg:static absolute left-0 w-[5rem] rounded-lg"
+            >
+              &lt;
+            </button>
+            <div className="lg:max-w-[90vw]  lg:h-[80vh] w-[30rem] h-[30rem] object-cover">
+              <Image
+                src={imageToShow}
+                width={1000}
+                height={1000}
+                alt="image"
+                className="w-full h-full"
+              />
+            </div>
+            {/* //next button */}
+            <button
+              onClick={showNext}
+              className="border-2 text-white text-7xl bg-[#00000086] pt-1 lg:static absolute right-0 w-[5rem] rounded-lg"
+            >
+            &gt;
+            </button>
           </div>
-          {/* //next button */}
-          <button onClick={showNext} className="border-2 text-white text-7xl bg-customGreen pt-1">⭢</button>
         </div>
       ) : (
         ""
       )}
 
       <div
-        className="w-full lg:h-[150vh] h-[120vh] overflow-hidden pb-24 "
+        className="w-full lg:h-[150vh] min-h-[90vh] overflow-hidden pb-24 "
         id="gallery"
       >
-        <div className="w-full  flex flex-col justify-center items-center gap-y-6 pt-24 pb-10">
+        <div className="w-full  flex flex-col justify-center items-center gap-y-6 lg:pt-24 pt-10 pb-10 px-6">
           <FadeUpBox>
-            <h1 className="text-5xl font-bold text-center text-customBlack">
+            <h1 className="lg:text-5xl text-4xl font-bold text-center text-customBlack">
               Our Gallery
             </h1>
           </FadeUpBox>
 
           <FadeUpBox delay={0.2} yaxis={50}>
-            <p className="text-xl font-semibold text-center text-customBlackFaded">
+            <p className="lg:text-xl text-lg font-semibold text-center text-customBlackFaded">
               Explore our gallery featuring unforgettable events hosted in our
               Main Hall
             </p>
           </FadeUpBox>
         </div>
 
-        <div className="w-full h-[60%]  grid grid-rows-4 grid-flow-col gap-4 py-5">
+        <div className="w-full h-[60%]  grid grid-rows-4 grid-flow-col gap-4 py-5 lg:px-0 px-6">
           <FadeRightBox
-            styles={`row-span-4 col-span-1 bg-purple-500 relative rounded-2xl  overflow-hidden`}
+            styles={`row-span-4 col-span-1 bg-purple-500 relative rounded-2xl hidden  overflow-hidden`}
           >
             <Image
               src={images[0]}
@@ -249,12 +267,11 @@ const Section4 = () => {
           styles={"w-full  flex justify-center items-center py-10"}
           yaxis={50}
         >
-        <Link href={'/gallery'}>
-        <div className="lg:w-[11rem] w-[10rem] h-[4rem] text-customBlack  border-black border-2 flex p-5 justify-center items-center gap-x-3 rounded-2xl lg:text-lg text-base font-semibold">
-            <p>See More</p>
-          </div>
-        </Link>
-          
+          <Link href={"/gallery"}>
+            <div className="lg:w-[11rem] w-[10rem] h-[4rem] text-customBlack  border-black border-2 flex p-5 justify-center items-center gap-x-3 rounded-2xl lg:text-lg text-base font-semibold">
+              <p>See More</p>
+            </div>
+          </Link>
         </FadeUpBox>
       </div>
     </>

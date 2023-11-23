@@ -44,16 +44,16 @@ const Section5 = () => {
     },
   ];
   return (
-    <div className="w-full h-screen   bg-[url('/images/main-center-images/img13.jpg')] bg-cover overflow-hidden" id="testimonial">
-      <div className="w-full h-full bg-[#0000006b] py-16 flex justify-end ">
+    <div className="w-full lg:h-screen h-[80vh]  bg-[url('/images/main-center-images/img13.jpg')] bg-cover overflow-hidden" id="testimonial">
+      <div className="w-full h-full bg-[#0000006b] lg:py-16 py-24 flex justify-end ">
         <FadeLeftBox
           styles={
-            "lg:w-[55%] w-full  h-full  rounded-l-[10rem]   overflow-hidden "
+            "lg:w-[55%] w-full  h-full  rounded-l-[10rem]  border-l-2  overflow-hidden "
           }
         >
-          <div className="w-full h-full   bg-[#000000ab] lg:px-32 px-10 flex justify-center flex-col text-white gap-y-20">
+          <div className="w-full h-full   bg-[#000000ab] lg:px-32 px-10 flex justify-center flex-col text-white lg:gap-y-20 gap-y-10">
             <FadeLeftBox delay={0.3}>
-              <p className="text-4xl font-bold lg:text-left text-center">
+              <p className="lg:text-4xl text-3xl font-bold lg:text-left text-center">
                 What Our Clients Say
               </p>
             </FadeLeftBox>
@@ -65,8 +65,9 @@ const Section5 = () => {
                   width={50}
                   height={50}
                   alt="quote icon"
+                  className="hidden lg:block"
                 />
-                <div className="w-full h-[6rem] ">
+                <div className="w-full h-[6rem] my-5 ">
                   <p className="lg:text-left text-center">
                     {testimonials[index].comment}
                   </p>

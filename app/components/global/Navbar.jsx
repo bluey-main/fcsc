@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="w-full  flex lg:flex-row flex-col justify-center items-center lg:px-10 lg:gap-y-0 gap-y-7 fixed top-0 z-50">
       <div className="lg:w-[30%] w-full  justify-between lg:px-0 px-10  flex">
         <Link href={"/"}>
-          <div className="w-full flex justify-center items-center">
+          <div className="w-full flex justify-center items-center pt-3">
           <Image
             src={"/images/coatofarms.png"}
             width={1000}
@@ -27,8 +27,8 @@ const Navbar = () => {
           />
 
           <div>
-          <p className="text-xl font-extrabold text-[#2D7E3C]"> <span> Federal Civil Service Club, <br /> Yaba</span> </p>
-          <p className="text-xs text-[#B1302B]">...building a productive and ethical civil service</p>
+          <p className="lg:text-xl  font-extrabold text-[#2D7E3C]"> <span> Federal Civil Service Club, <br /> Yaba</span> </p>
+          <p className="text-xs text-[#B1302B] pr-8">...building a productive and ethical civil service</p>
           </div>
           
 

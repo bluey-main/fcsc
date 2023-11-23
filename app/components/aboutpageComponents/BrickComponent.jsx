@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import FadeLeftBox from "../animatedComponents/FadeLeftBox";
 
@@ -10,7 +9,10 @@ const BrickComponent = ({
   delay,
 }) => {
   return (
-    <FadeLeftBox styles={"w-full h-[14rem] py-4 flex justify-end relative"} delay={delay}>
+    <FadeLeftBox
+      styles={"w-full h-[14rem] py-4 flex justify-end relative"}
+      delay={delay}
+    >
       <div
         className={`w-[90%] h-full ${mainColor} rounded-2xl flex flex-col justify-center pl-12 pr-10 gap-y-1`}
       >
