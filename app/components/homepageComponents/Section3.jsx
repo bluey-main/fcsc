@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Section3 = () => {
   return (
-    <div className="w-full lg:h-screen h-[80vh] bg-[#F5F5DC]  flex justify-center items-center overflow-hidden py-[80rem]">
+    <div className="w-full lg:h-screen h-[80vh] bg-[#F5F5DC]  flex justify-center items-center overflow-hidden">
       <div className="w-full lg:h-[80%] h-[30rem]  flex relative">
         <FadeRightBox
           styles={
