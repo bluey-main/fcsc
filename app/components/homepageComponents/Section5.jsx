@@ -19,6 +19,7 @@ const Section5 = () => {
 
   const testimonials = [
     {
+      
       name: "Adam",
       role: "Event planner",
       comment:
@@ -48,7 +49,7 @@ const Section5 = () => {
       <div className="w-full h-full bg-[#0000006b] lg:py-16 py-24 flex justify-end ">
         <FadeLeftBox
           styles={
-            "lg:w-[55%] w-full  h-full  rounded-l-[10rem]  border-l-2  overflow-hidden "
+            "lg:w-[55%] w-full  h-full  lg:rounded-l-[10rem]  border-l-2  overflow-hidden "
           }
         >
           <div className="w-full h-full   bg-[#000000ab] lg:px-32 px-10 flex justify-center flex-col text-white lg:gap-y-20 gap-y-10">

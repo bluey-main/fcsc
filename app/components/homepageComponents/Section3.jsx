@@ -7,11 +7,11 @@ import Link from "next/link";
 
 const Section3 = () => {
   return (
-    <div className="w-full lg:h-screen h-[80vh] bg-[#F5F5DC]  flex justify-center items-center overflow-hidden">
+    <div className="w-full lg:h-screen h-[80vh] bg-[#F5F5DC]  flex justify-center items-center overflow-hidden py-[80rem]">
       <div className="w-full lg:h-[80%] h-[30rem]  flex relative">
         <FadeRightBox
           styles={
-            'lg:w-[55%] w-full  h-full  rounded-r-[10rem] bg-[url("/images/main-center-images/img13.jpg")] bg-cover overflow-hidden'
+            'lg:w-[55%] w-full  h-full  lg:rounded-r-[10rem] bg-[url("/images/main-center-images/img13.jpg")] bg-cover overflow-hidden'
           }
         >
           <div className="w-full h-full bg-[#0000006b]"></div>
@@ -31,15 +31,21 @@ const Section3 = () => {
             </div>
           </FadeLeftBox>
 
+          <div>
           <FadeLeftBox delay={0.2}>
             <h1 className="lg:text-5xl text-4xl font-bold lg:text-customBlack text-white">
               Elevate Your Event at Our Grand Hall
             </h1>
-            <p className="lg:text-xl text-lg font-medium lg:text-customBlackFaded text-white">
+            
+          </FadeLeftBox>
+          <FadeRightBox delay={0.5}>
+          <p className="lg:text-xl text-lg font-medium lg:text-customBlackFaded text-white">
               Secure your special occasion today. Our Grand Hall is in high
               demand
             </p>
-          </FadeLeftBox>
+          </FadeRightBox>
+          </div>
+        
 
           <FadeUpBox yaxis={50} delay={0.3}>
             <Link href={"/contact"}>

@@ -9,7 +9,7 @@ const dancingScript = Dancing_Script({subsets:['latin']})
 
 const Section1 = () => {
   return (
-    <div className="w-full lg:h-[160vh] h-[90vh] bg-[#F5F5DC] relative overflow-hidden">
+    <div className="w-full lg:h-[160vh] h-[100vh] bg-[#F5F5DC] relative overflow-hidden">
       <Image
         src={"/Lines.svg"}
         width={2000}

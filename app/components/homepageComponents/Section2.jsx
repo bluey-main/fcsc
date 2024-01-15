@@ -10,7 +10,7 @@ const Section2 = () => {
         <div className="w-full lg:h-[50%]  lg:px-24 flex flex-col gap-y-7 text-white lg:justify-start lg:items-start justify-center items-center px-9  ">
           <FadeRightBox>
             <h1 className="lg:text-5xl text-4xl font-bold text-center lg:text-start">
-              Our Grand Hall
+              Our Grand Event Center
             </h1>
           </FadeRightBox>
 
