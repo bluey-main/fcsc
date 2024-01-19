@@ -17,9 +17,9 @@ const page = () => {
             />
             <a
               href="mailto:victorekeocha016@gmail.com"
-              className="text-blue-700 underline"
+              className="text-red-400 underline"
             >
-              info@federal.com
+              FederalCivilhallyaba@gmail.com
             </a>
           </div>
           <div className="w-full flex  gap-x-2 items-center">
@@ -30,7 +30,7 @@ const page = () => {
               alt="envelope icon"
               className="w-[2rem] h-[2rem]"
             />
-            <p>+234 814 299 1231</p>
+            <p>+234 809 4398 734</p>
           </div>
           <div className="w-full flex  gap-x-2 items-center">
             <Image

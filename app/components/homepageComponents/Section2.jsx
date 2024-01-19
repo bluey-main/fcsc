@@ -5,7 +5,7 @@ import FadeUpBox from "../animatedComponents/FadeUpBox";
 
 const Section2 = () => {
   return (
-    <div className='w-full lg:h-screen h-[50vh] bg-pink-400 bg-[url("/images/main-center-images/img5.jpg")] bg-cover bg-center overflow-hidden'>
+    <div className='w-full lg:h-screen h-[80vh] bg-pink-400 bg-[url("/images/main-center-images/img5.jpg")] bg-cover bg-center overflow-hidden'>
       <div className="w-full h-full bg-[#00000086] flex lg:items-end items-center">
         <div className="w-full lg:h-[50%]  lg:px-24 flex flex-col gap-y-7 text-white lg:justify-start lg:items-start justify-center items-center px-9  ">
           <FadeRightBox>
