@@ -143,19 +143,15 @@ const Gallery = () => {
         ""
       )}
       <div className="">
-        <div className="p-6 pt-10 container mx-auto">
+        <div className="px-28 pt-10 container mx-auto">
         
-          <div className="md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+          <div className="flex flex-wrap gap-x-4">
             {images.map((image) => {
               return (
                 <>
-                  <article
-                    key={image}
-                    className="p-6 mb-6  transition duration-300 group transform hover:-translate-y-2 lg:hover:shadow-2xl shadow-2xl rounded-2xl cursor-pointer"
-                    onClick={() => showImage(image)}
-                  >
+                 
                 
-                    <div className="relative mb-4 rounded-2xl">
+                    <div className="w-[20rem] h-[20rem] relative mb-4 rounded-2xl" onClick={() => showImage(image)}>
                       <Image
                         width={400}
                         height={400}
@@ -168,7 +164,7 @@ const Gallery = () => {
                     <h3 className="font-medium text-xl leading-8">
                      
                     </h3>
-                  </article>
+                  
                 </>
               );
             })}
