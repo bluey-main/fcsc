@@ -5,6 +5,9 @@ import FadeRightBox from "../animatedComponents/FadeRightBox";
 import FadeLeftBox from "../animatedComponents/FadeLeftBox";
 import FadeInBox from "../animatedComponents/FadeInBox";
 import { useState, useEffect } from "react";
+import { register } from "swiper/element/bundle";
+import { FaCaretLeft,FaCaretRight } from "react-icons/fa";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,9 +27,11 @@ const Section4 = () => {
     image3,
     image4,
     image5,
-    image6,
-    image7,
-    image8,
+    image1,
+
+    // image6,
+    // image7,
+    // image8,
   ];
 
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
@@ -45,11 +50,12 @@ const Section4 = () => {
   const hideLightBox = () => {
     setLightBoxDisplay(false);
 
-     // Remove the 'overflow: hidden' style when the lightbox is closed
-     document.body.style.overflow = "visible";
+    // Remove the 'overflow: hidden' style when the lightbox is closed
+    document.body.style.overflow = "visible";
   };
 
   useEffect(() => {
+    register();
     // Add the 'overflow: hidden' style when the lightbox is displayed
     if (lightboxDisplay) {
       document.body.style.overflow = "hidden";
@@ -87,20 +93,15 @@ const Section4 = () => {
 
   return (
     <>
-      {lightboxDisplay ? (
+       {lightboxDisplay ? (
         <div
           className="z-50 fixed top-0 left-0 w-full h-full bg-[#000000b2] flex items-center justify-between"
           onClick={hideLightBox}
         >
-          <div className="w-full h-full flex items-center justify-between px-4">
+          <div className="w-full h-full flex items-center justify-between gap-x-5 px-4">
             {/* //previous button */}
-            <button
-              onClick={showPrev}
-              className="border-2 text-white text-7xl bg-[#00000086] pt-1 lg:static absolute left-0 w-[5rem] rounded-lg"
-            >
-              &lt;
-            </button>
-            <div className="lg:max-w-[90vw]  lg:h-[80vh] w-[30rem] h-[30rem] object-cover">
+            <FaCaretLeft onClick={showPrev} className="text-white lg:w-[8rem] lg:h-[8rem] w-[3rem] h-[8rem]"/>
+            <div className="lg:w-[70vw]  lg:h-[80vh] w-[70rem] h-[30rem] object-cover">
               <Image
                 src={imageToShow}
                 width={1000}
@@ -110,19 +111,82 @@ const Section4 = () => {
               />
             </div>
             {/* //next button */}
-            <button
-              onClick={showNext}
-              className="border-2 text-white text-7xl bg-[#00000086] pt-1 lg:static absolute right-0 w-[5rem] rounded-lg"
-            >
-            &gt;
-            </button>
+            <FaCaretRight  onClick={showNext} className="text-white lg:w-[8rem] lg:h-[8rem] w-[3rem] h-[8rem]"/>
+
           </div>
         </div>
       ) : (
         ""
       )}
 
-      <div
+      <div className="w-full lg:h-screen bg-red py-9 flex justify-center lg:flex-row flex-col items-center overflow-hidden">
+        <div className="lg:w-[40%] w-full h-full  flex flex-col justify-center bg-blue lg:items-start items-center  gap-y-6 lg:pt-24 pt-10 pb-10 lg:px-12">
+          <div data-aos="fade-right" data-aos-duration="1400">
+            <h1 className="lg:text-6xl text-4xl font-bold lg:text-left text-center text-customBlack">
+              Our Gallery
+            </h1>
+          </div>
+
+          <div data-aos="fade-right" data-aos-duration="1400">
+            <p className="lg:text-xl text-lg font-semibold lg:text-left text-center lg:px-0 px-9 text-customBlackFaded">
+              Explore our gallery featuring unforgettable events hosted in our
+              Main Hall
+            </p>
+          </div>
+
+          <div
+            styles={"w-full  flex justify-center items-center py-10"}
+            yaxis={50}
+          >
+            <Link href={"/gallery"}>
+              <div
+                className="lg:w-[11rem] w-[10rem] h-[4rem] text-white bg-customGreen flex p-5 justify-center items-center gap-x-3 rounded-2xl lg:text-lg text-base font-semibold"
+                data-aos="fade-right"
+                data-aos-duration="1400"
+              >
+                <p>See More</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        <div
+          className="lg:w-[60%] w-full lg:h-full  bg-blue-"
+          data-aos="fade-left"
+          data-aos-duration="1400"
+        >
+          <swiper-container
+            style={{
+              height: "100%",
+              "--swiper-navigation-color": "#a12f27ff",
+              "--swiper-pagination-color": "#008000ff",
+            }}
+            pagination="false"
+            navigation="true"
+            space-between="30"
+            centered-slides="true"
+            autoplay-delay="3000"
+            autoplay-disable-on-interaction="false"
+          >
+            {images.map((image, index) => (
+              <swiper-slide key={index}>
+                <div className="w-full h-full flex justify-center items-center rounded-xl overflow-hidden" onClick={() => showImage(image)}>
+                  <Image
+                    src={image}
+                    width={1000}
+                    height={1000}
+                    alt=""
+                    className="w-[70%] h-[70%]"
+                    objectFit="contain"
+                  />
+                </div>
+              </swiper-slide>
+            ))}
+          </swiper-container>
+        </div>
+      </div>
+
+      {/* <div
         className="w-full lg:h-[150vh] min-h-[90vh] overflow-hidden pb-24 "
         id="gallery"
       >
@@ -252,15 +316,6 @@ const Section4 = () => {
               onClick={() => showImage(images[7], 7)}
             />
           </FadeInBox>
-
-          {/* <div class="row-span-4 col-span-1 bg-purple-500  rounded-2xl bg-[url('/images/event1.jpg')] bg-cover bg-center"></div>
-        <div class="row-span-2 col-span-1  bg-purple-500 rounded-2xl bg-[url('/images/event2.jpg')] bg-cover bg-center"></div>
-        <div class="row-span-2 col-span-1  bg-purple-500 rounded-2xl bg-[url('/images/event3.jpg')] bg-cover bg-center"></div>
-        <div class="row-span-3 col-span-1  bg-purple-500 rounded-2xl bg-[url('/images/event4.jpg')] bg-cover bg-center hidden lg:block"></div>
-        <div class="row-span-1 col-span-4  bg-purple-500 rounded-2xl bg-[url('/images/event5.jpg')] bg-cover bg-center hidden lg:block"></div>
-        <div class="row-span-1 col-span-3  bg-purple-500 rounded-2xl bg-[url('/images/event2.jpg')] bg-cover bg-center hidden lg:block"></div>
-        <div class="row-span-2 col-span-1  bg-purple-500 rounded-2xl bg-[url('/images/event3.jpg')] bg-cover bg-center hidden lg:block"></div>
-        <div class="row-span-2 col-span-2  bg-purple-500 rounded-2xl bg-[url('/images/event1.jpg')] bg-cover bg-center hidden lg:block"></div> */}
         </div>
 
         <FadeUpBox
@@ -273,7 +328,7 @@ const Section4 = () => {
             </div>
           </Link>
         </FadeUpBox>
-      </div>
+      </div> */}
     </>
   );
 };

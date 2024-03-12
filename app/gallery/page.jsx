@@ -147,7 +147,7 @@ const Gallery = () => {
               <MdPartyMode className="text-red-500 h-[3rem] w-[3rem]"/>
               <div className="w-[10rem] h-1 bg-white"></div>
             </div>
-            <p className="text-white lg:px-96 text-center lg:font-bold text-lg">Discover Unforgettable Moments at Our Event Center Where Every Celebration Feels Like Your Own Party</p>
+            <p className="text-white lg:px-96 text-center  text-lg">Discover Unforgettable Moments at Our Event Center Where Every Celebration Feels Like Your Own Party</p>
 
             
           </div>
