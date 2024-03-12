@@ -10,6 +10,7 @@ import { FaCaretLeft,FaCaretRight } from "react-icons/fa";
 
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "../global/Footer";
 
 const Section4 = () => {
   const image1 = "/images/main-center-images/img2.jpg";
@@ -169,7 +170,7 @@ const Section4 = () => {
             autoplay-disable-on-interaction="false"
           >
             {images.map((image, index) => (
-              <swiper-slide key={index}>
+              <swiper-slide key={index} >
                 <div className="w-full h-full flex justify-center items-center rounded-xl overflow-hidden" onClick={() => showImage(image)}>
                   <Image
                     src={image}
@@ -186,149 +187,6 @@ const Section4 = () => {
         </div>
       </div>
 
-      {/* <div
-        className="w-full lg:h-[150vh] min-h-[90vh] overflow-hidden pb-24 "
-        id="gallery"
-      >
-        <div className="w-full  flex flex-col justify-center items-center gap-y-6 lg:pt-24 pt-10 pb-10 px-6">
-          <FadeUpBox>
-            <h1 className="lg:text-5xl text-4xl font-bold text-center text-customBlack">
-              Our Gallery
-            </h1>
-          </FadeUpBox>
-
-          <FadeUpBox delay={0.2} yaxis={50}>
-            <p className="lg:text-xl text-lg font-semibold text-center text-customBlackFaded">
-              Explore our gallery featuring unforgettable events hosted in our
-              Main Hall
-            </p>
-          </FadeUpBox>
-        </div>
-
-        <div className="w-full h-[60%]  grid grid-rows-4 grid-flow-col gap-4 py-5 lg:px-0 px-6">
-          <FadeRightBox
-            styles={`row-span-4 col-span-1 bg-purple-500 relative rounded-2xl hidden  overflow-hidden`}
-          >
-            <Image
-              src={images[0]}
-              width={1000}
-              height={1000}
-              alt="image"
-              className="w-full h-full"
-              onClick={() => showImage(images[0], 0)}
-            />
-          </FadeRightBox>
-          <FadeUpBox
-            styles={
-              "row-span-2 col-span-1  bg-purple-500 rounded-2xl overflow-hidden bg-cover bg-center"
-            }
-          >
-            <Image
-              src={images[1]}
-              width={1000}
-              height={1000}
-              alt="image"
-              className="w-full h-full"
-              onClick={() => showImage(images[1], 1)}
-            />
-          </FadeUpBox>
-          <FadeLeftBox
-            styles={
-              "row-span-2 col-span-1  bg-purple-500 rounded-2xl overflow-hidden bg-cover bg-center"
-            }
-          >
-            <Image
-              src={images[2]}
-              width={1000}
-              height={1000}
-              alt="image"
-              className="w-full h-full"
-              onClick={() => showImage(images[2], 2)}
-            />
-          </FadeLeftBox>
-          <FadeInBox
-            styles={
-              "row-span-3 col-span-1  bg-purple-500 rounded-2xl overflow-hidden bg-cover bg-center hidden lg:block"
-            }
-          >
-            <Image
-              src={images[3]}
-              width={1000}
-              height={1000}
-              alt="image"
-              className="w-full h-full"
-              onClick={() => showImage(images[3], 3)}
-            />
-          </FadeInBox>
-          <FadeRightBox
-            styles={
-              "row-span-1 col-span-4  bg-purple-500 rounded-2xl overflow-hidden flex justify-center items-center hidden lg:block"
-            }
-          >
-            <Image
-              src={images[4]}
-              width={1000}
-              height={1000}
-              alt="image"
-              className="w-full h-screen"
-              onClick={() => showImage(images[4], 4)}
-            />
-          </FadeRightBox>
-          <FadeUpBox
-            styles={
-              "row-span-1 col-span-3  bg-purple-500 rounded-2xl overflow-hidden bg-cover bg-center hidden lg:block"
-            }
-          >
-            <Image
-              src={images[5]}
-              width={1000}
-              height={1000}
-              alt="image"
-              className="w-full h-screen"
-              onClick={() => showImage(images[5], 5)}
-            />
-          </FadeUpBox>
-          <FadeLeftBox
-            styles={
-              "row-span-2 col-span-1  bg-purple-500 rounded-2xl overflow-hidden bg-cover bg-center hidden lg:block"
-            }
-          >
-            <Image
-              src={images[6]}
-              width={1000}
-              height={1000}
-              alt="image"
-              className="w-full h-full"
-              onClick={() => showImage(images[6], 6)}
-            />
-          </FadeLeftBox>
-          <FadeInBox
-            styles={
-              "row-span-2 col-span-2  bg-purple-500 rounded-2xl overflow-hidden bg-cover bg-center hidden lg:block"
-            }
-          >
-            <Image
-              src={images[7]}
-              width={1000}
-              height={1000}
-              alt="image"
-              className="w-full h-full "
-              onClick={() => showImage(images[7], 7)}
-            />
-          </FadeInBox>
-        </div>
-
-        <FadeUpBox
-          styles={"w-full  flex justify-center items-center py-10"}
-          yaxis={50}
-        >
-          <Link href={"/gallery"}>
-            <div className="lg:w-[11rem] w-[10rem] h-[4rem] text-customBlack  border-black border-2 flex p-5 justify-center items-center gap-x-3 rounded-2xl lg:text-lg text-base font-semibold">
-              <p>See More</p>
-            </div>
-          </Link>
-        </FadeUpBox>
-      </div> */}
     </>
   );
 };

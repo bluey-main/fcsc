@@ -12,6 +12,7 @@ import { LuPartyPopper } from "react-icons/lu";
 
 import React from "react";
 import { useState, useEffect } from "react";
+import Footer from "../components/global/Footer";
 const Gallery = () => {
   const image1 = "/images/main-center-images/img2.jpg";
   const image2 = "/images/main-center-images/img3.jpg";
@@ -138,13 +139,13 @@ const Gallery = () => {
       ) : (
         ""
       )}
-      <div className="">
-        <div className="w-full h-[80vh] bg-green-500 relative overflow-hidden">
-          <div className="w-full h-full bg-[#00000079] absolute px-7 top-0 z-20 flex flex-col justify-center items-center">
+      <div className="mb-32">
+        <div className="w-full h-[80vh] bg-green- relative overflow-hidden">
+          <div className="w-full h-full bg-[#00000079] absolute px-7 top-0 z-20 flex flex-col gap-y-2 justify-center items-center">
             <p className="lg:text-8xl text-5xl text-white divide-y divide-solid">Gallery</p>
             <div className="flex justify-center items-center">
               <div className="w-[10rem] h-1 bg-white"></div>
-              <MdPartyMode className="text-red-500 h-[3rem] w-[3rem]"/>
+              <MdPartyMode className="text-white h-[3rem] w-[3rem]"/>
               <div className="w-[10rem] h-1 bg-white"></div>
             </div>
             <p className="text-white lg:px-96 text-center  text-lg">Discover Unforgettable Moments at Our Event Center Where Every Celebration Feels Like Your Own Party</p>
@@ -214,6 +215,8 @@ const Gallery = () => {
           })}
         </div>
       </div>
+      <Footer/>
+      
     </>
   );
 };

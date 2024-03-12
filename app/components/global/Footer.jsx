@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="lg:w-[50%] w-full flex flex-col justify-center items-center">
           <Link href={"/"}>
             <div className="w-full flex justify-center items-center pt-3">
-              <Image
+              {/* <Image
                 src={"/images/coatofarms.png"}
                 width={1000}
                 height={1000}
                 alt="fcsc logo"
                 className="w-[6rem] h-full lg:ml-0 ml-[-3rem] scale-75 "
-              />
+              /> */}
 
               <div>
                 <p className="lg:text-xl  font-extrabold text-[#2D7E3C]">
